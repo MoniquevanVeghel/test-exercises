@@ -1,0 +1,24 @@
+// Create a new folder exercises in your home directory
+
+$ mkdir test-exercises
+$ cd test-exercises/
+
+// Initialize a git repository in this folder
+
+$ git init
+
+// Make sure your repository is available on GitHub
+
+$ git config --global user.name "MoniquevanVeghel"
+$ git config --global user.email monique.van.veghel-plandsoen@student.howest.be
+$ echo "# test-exercises" >> README.md
+$ git add README.md
+$ git commit -m "first commit"
+$ git remote add origin https://github.com/MoniquevanVeghel/test-exercises.git
+$ git push -u origin master
+
+// Save your command in a file called exercise1.txt and add this file to your repository
+
+$ touch exercise1.txt
+
+
