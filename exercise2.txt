@@ -1,0 +1,18 @@
+﻿// UNF: Group all data in one entity
+// 1NF: eliminate repeating (and calculated) groups + create separate table for each set of related data + Identify each set with a primary key
+// 2NF: every  non-prime attribute of the table is dependent on the whole key of every candidate key
+// 3NF: Every non-prime attribute is non-transitively dependent on every key
+// BCNF: Any attribute on which some other attribute is fully functionally dependent + every determinant is a candidate key
+
+// Solution:
+
+UNF:	dentist (staffNo, dentistName, (patientNo, patientName, app_date, app_time, surgeryNo)) 
+1NF:	dentist (staffNo, dentistName)
+	patient (staffNo, patientNo, patientName, app_date, app_time, surgeryNo)
+2NF:	dentist (staffNo, dentistName)
+	patient (patientNo, patientName, surgeryNo)
+	appointment (app_date, app_time, surgeryNo, staffNo)
+3NF: 	dentist (staffNo, dentistName)
+	patient (patientNo, patientName)
+	appointment (surgeryNo, app_date, app_time, appNo)
+	surgery (surgeryNo, staffNo, patNo, appNo)
