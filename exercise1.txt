@@ -20,5 +20,6 @@ $ git push -u origin master
 // Save your command in a file called exercise1.txt and add this file to your repository
 
 $ touch exercise1.txt
-
+$ git add exercise1.txt
+$ git commit -m "first add file to repository"
 
